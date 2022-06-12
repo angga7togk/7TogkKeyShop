@@ -1,5 +1,5 @@
 # 7TogkKeyShop
-Plugin Ini Berguna Untuk Menjual Key Gacha.
+Plugin Ini Berguna Untuk Menjual Key Gacha
 
 # Defend
 ```
