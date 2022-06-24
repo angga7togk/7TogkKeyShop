@@ -46,7 +46,7 @@ class Main extends PluginBase {
         $money = $this->eco->myMoney($player);
         if($money >= $this->config->get($data)["Key"]["Price"]) {
             $this->eco->reduceMoney($player, $this->config->get($data)["Key"]["Price"]);
-            $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get("0")["Key"]["Name"] . " 1 " . $player->getName());
+            $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get($data)["Key"]["Name"] . " 1 " . $player->getName());
             $player->sendMessage("§aSuccesfully buy a key");
         } else {
             $player->sendMessage("§cFailed buy a key");
