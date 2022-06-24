@@ -44,6 +44,7 @@ class Main extends PluginBase {
         if($data === null){
           return true;
         }
+        $money = $this->eco->myMoney($player);
         if($money >= $this->config->get($data)["Key"]["Price"]) {
             $this->eco->reduceMoney($player, $this->config->get($data)["Key"]["Price"]);
             $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get($data)["Key"]["Name"] . " 1 " . $player->getName());
