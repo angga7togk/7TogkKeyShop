@@ -20,6 +20,7 @@ use onebone\economyapi\EconomyAPI;
 class Main extends PluginBase {
     
     public Config $config;
+    public $eco;
     
     public function onEnable() : void {
       $this->getServer()->getPluginManager()->registerEvents($this, $this);
