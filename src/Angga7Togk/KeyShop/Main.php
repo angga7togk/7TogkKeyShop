@@ -29,7 +29,7 @@ class Main extends PluginBase {
       $this->eco = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI");
     }
   
-    public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args) : bool {
+    public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool {
     
       if($cmd->getName() == "keyshop"){
           $this->KeyShopMenu($sender);
@@ -47,8 +47,9 @@ class Main extends PluginBase {
         $money = $this->eco->myMoney($player);
         if($money >= $this->config->get($data)["Key"]["Price"]) {
             $this->eco->reduceMoney($player, $this->config->get($data)["Key"]["Price"]);
-            $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get($data)["Key"]["Name"] . " 1 " . $player->getName());
-            $player->sendMessage("§aSuccesfully buy a key");
+            $test = str_replace("{name}", $player->getName(), $this->config->get($data)["Key"]["Commands"]);
+            $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandSender($this->getServer(), $this->getServer()->getLanguage()), $test);
+            $player->sendMessage($this->config->get($data)["Key"]["Message"]);
         } else {
             $player->sendMessage("§cFailed buy a key");
         }
