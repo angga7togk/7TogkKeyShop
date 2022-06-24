@@ -11,14 +11,13 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command; 
 use pocketmine\command\CommandSender;
 use pocketmine\console\ConsoleCommandSender;
-use pocketmine\event\Listener;
 use pocketmine\utils\Config;
 
 use Angga7Togk\KeyShop\Form\SimpleForm;
 
 use onebone\economyapi\EconomyAPI;
 
-class Main extends PluginBase implements Listener {
+class Main extends PluginBase {
     
     public Config $config;
     
