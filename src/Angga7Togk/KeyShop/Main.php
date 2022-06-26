@@ -42,7 +42,7 @@ class Main extends PluginBase implements Listener {
     
         $money = EconomyAPI::getInstance()->myMoney($player);
         switch ($data){
-          case 9:
+          case 0:
               $player->sendMessage("§eThanks For Using KeyShop");
           break;
                 
