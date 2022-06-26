@@ -1,10 +1,9 @@
 # 7TogkKeyShop
-Plugin Ini Berguna Untuk Menjual Key Gacha
+Plugin Ini Berguna Untuk KeyShop
 
 # Defend
 ```
  • EconomyAPI
- • PiggyCrate
 
 ```
 
@@ -28,8 +27,10 @@ Plugin Ini Berguna Untuk Menjual Key Gacha
 # Batas Tombol 0 - 9 Kalo Lebih Bakal Eror
 0:
   Key:
-    Name: "Common" # Nama Key Dari PiggyCrate
+    Name: "Common" # Nama Button
     Price: 1000 # Harga Key
+    Commands: "key Common 1 {name}" # Command untuk button ketika membeli
+    Message: "§aBerhasil membeli 1 key Common" # Message Berhasil Membeli
   Button:
     Name: "§l§eCommon Key" # Nama Tombol
     Sub-Name: "Harga : 1k" # Nama Bawah 
@@ -37,6 +38,8 @@ Plugin Ini Berguna Untuk Menjual Key Gacha
   Key:
     Name: "Legendary"
     Price: 5000
+    Commands: "key Legendary 1 {name}" # Command untuk button ketika membeli
+    Message: "§aBerhasil membeli 1 key Legendary"
   Button:
     Name: "§l§eLegendary Key"
     Sub-Name: "Harga : 5k"

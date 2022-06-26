@@ -13,6 +13,8 @@
   Key:
     Name: "Common" # Nama Key Dari PiggyCrate
     Price: 1000 # Harga Key
+    Commands: "key Common 1 {name}"
+    Message: "§aBerhasil membeli key Common"
   Button:
     Name: "§l§eCommon Key" # Nama Tombol
     Sub-Name: "Harga : 1k" # Nama Bawah 
@@ -20,6 +22,8 @@
   Key:
     Name: "Legendary"
     Price: 5000
+    Commands: "key Legendary 1 {name}"
+    Message: "§aBerhasil membeli key Legendary"
   Button:
     Name: "§l§eLegendary Key"
     Sub-Name: "Harga : 5k"
