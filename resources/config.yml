@@ -8,15 +8,15 @@
 # Pengen Punya Ayang Cewek Animek Anjr
 
 # Membutuhkan plugin EconomyAPI dan PiggyCrate
-# Batas Tombol 1 - 10 Kalo Lebih Bakal Eror
-1:
+# Batas Tombol 0 - 9 Kalo Lebih Bakal Eror
+0:
   Key:
     Name: "Common" # Nama Key Dari PiggyCrate
     Price: 1000 # Harga Key
   Button:
     Name: "§l§eCommon Key" # Nama Tombol
     Sub-Name: "Harga : 1k" # Nama Bawah 
-2:
+1:
   Key:
     Name: "Legendary"
     Price: 5000
