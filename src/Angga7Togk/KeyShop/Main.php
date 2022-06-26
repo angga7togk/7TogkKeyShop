@@ -143,8 +143,9 @@ class Main extends PluginBase implements Listener {
           break;
         }
       });
+      $mymoney = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI")->myMoney($player);
       $form->setTitle("§l7TogkKeyShop");
-      $form->setContent(">> §eHi, §a" . $player->getName() . "\n>> §eYour Money §a" . $money . "$"); 
+      $form->setContent(">> §eHi, §a" . $player->getName() . "\n>> §eYour Money §a" . $mymoney . "$"); 
       $form->addButton("§l§cExit\n§rTap To Exit", 0, "textures/ui/cancel");
       for($i = 1;$i <= 10;$i++){
           if($this->config->exists($i)){
