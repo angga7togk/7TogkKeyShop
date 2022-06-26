@@ -143,7 +143,6 @@ class Main extends PluginBase implements Listener {
           break;
         }
       });
-      $mymoney = getPlugin()->getPluginManager()
       $form->setTitle("§l7TogkKeyShop");
       $form->setContent(">> §eHi, §a" . $player->getName() . "\n>> §eYour Money §a" . $money . "$"); 
       $form->addButton("§l§cExit\n§rTap To Exit", 0, "textures/ui/cancel");
