@@ -42,7 +42,11 @@ class Main extends PluginBase implements Listener {
     
         $money = EconomyAPI::getInstance()->myMoney($player);
         switch ($data){
-          case 0:
+          case 9:
+              $player->sendMessage("§eThanks For Using KeyShop");
+          break;
+                
+          case 1:
             if($money >= $this->config->get("0")["Key"]["Price"]){
               EconomyAPI::getInstance()->reduceMoney($player, $this->config->get("0")["Key"]["Price"]);
               $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get("0")["Key"]["Name"] . " 1 " . $player->getName());
@@ -52,7 +56,7 @@ class Main extends PluginBase implements Listener {
             }
           break;
         
-          case 1:
+          case 2:
             if($money >= $this->config->get("1")["Key"]["Price"]){
               EconomyAPI::getInstance()->reduceMoney($player, $this->config->get("1")["Key"]["Price"]);
               $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get("1")["Key"]["Name"] . " 1 " . $player->getName());
@@ -62,7 +66,7 @@ class Main extends PluginBase implements Listener {
             }
           break;
         
-          case 2:
+          case 3:
             if($money >= $this->config->get("2")["Key"]["Price"]){
               EconomyAPI::getInstance()->reduceMoney($player, $this->config->get("2")["Key"]["Price"]);
               $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get("2")["Key"]["Name"] . " 1 " . $player->getName());
@@ -72,7 +76,7 @@ class Main extends PluginBase implements Listener {
             }
           break;
         
-          case 3:
+          case 4:
             if($money >= $this->config->get("3")["Key"]["Price"]){
               EconomyAPI::getInstance()->reduceMoney($player, $this->config->get("3")["Key"]["Price"]);
               $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get("3")["Key"]["Name"] . " 1 " . $player->getName());
@@ -82,7 +86,7 @@ class Main extends PluginBase implements Listener {
             }
           break;
         
-          case 4:
+          case 5:
             if($money >= $this->config->get("4")["Key"]["Price"]){
               EconomyAPI::getInstance()->reduceMoney($player, $this->config->get("4")["Key"]["Price"]);
               $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get("4")["Key"]["Name"] . " 1 " . $player->getName());
@@ -92,7 +96,7 @@ class Main extends PluginBase implements Listener {
             }
           break;
         
-          case 5:
+          case 6:
             if($money >= $this->config->get("5")["Key"]["Price"]){
               EconomyAPI::getInstance()->reduceMoney($player, $this->config->get("5")["Key"]["Price"]);
               $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get("5")["Key"]["Name"] . " 1 " . $player->getName());
@@ -102,7 +106,7 @@ class Main extends PluginBase implements Listener {
             }
           break;
         
-          case 6:
+          case 7:
             if($money >= $this->config->get("6")["Key"]["Price"]){
               EconomyAPI::getInstance()->reduceMoney($player, $this->config->get("6")["Key"]["Price"]);
               $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get("6")["Key"]["Name"] . " 1 " . $player->getName());
@@ -112,7 +116,7 @@ class Main extends PluginBase implements Listener {
             }
           break;
         
-          case 7:
+          case 8:
             if($money >= $this->config->get("7")["Key"]["Price"]){
               EconomyAPI::getInstance()->reduceMoney($player, $this->config->get("7")["Key"]["Price"]);
               $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get("7")["Key"]["Name"] . " 1 " . $player->getName());
@@ -122,7 +126,7 @@ class Main extends PluginBase implements Listener {
             }
           break;
         
-          case 8:
+          case 9:
             if($money >= $this->config->get("8")["Key"]["Price"]){
               EconomyAPI::getInstance()->reduceMoney($player, $this->config->get("8")["Key"]["Price"]);
               $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get("8")["Key"]["Name"] . " 1 " . $player->getName());
@@ -132,7 +136,7 @@ class Main extends PluginBase implements Listener {
             }
           break;
         
-          case 9:
+          case 10:
             if($money >= $this->config->get("9")["Key"]["Price"]){
               EconomyAPI::getInstance()->reduceMoney($player, $this->config->get("9")["Key"]["Price"]);
               $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get("9")["Key"]["Name"] . " 1 " . $player->getName());
@@ -145,8 +149,9 @@ class Main extends PluginBase implements Listener {
       });
       $mymoney = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI")->myMoney($player);
       $form->setTitle($this->config->get("Title"));
-      $form->setContent("§g>> §eHi, §b" . $player->getName() . "\n§g>> §eYour Balance §a" . $mymoney);
-      for($i = 0;$i <= 9;$i++){
+      $form->setContent("§g>> §eHi, §b" . $player->getName() . "\n§g>> §eYour Money §a" . $mymoney);
+      $form->addButton("§l§cExit\n§rTap To Exit", 0, "texutures/ui/cancel");
+      for($i = 1;$i <= 10;$i++){
           if($this->config->exists($i)){
               $form->addButton($this->config->get($i)["Button"]["Name"] . "\n§r" . $this->config->get($i)["Button"]["Sub-Name"]);
           }
