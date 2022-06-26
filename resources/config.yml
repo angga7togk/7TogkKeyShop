@@ -1,0 +1,29 @@
+### [ 7TogkKeyShop ] ###
+
+# use § To Change Colors Text
+
+# Need plugin EconomyAPI and PiggyCrate to launch this plugin
+# Limit Button/Key 0 - 9
+
+Title: "§l7TogkKeyShop"
+
+0:
+  Key:
+    Name: "Common" # Key Name
+    Price: 1000 # Price key
+  Button:
+    Name: "§l§eCommon Key" # Button Name
+    Sub-Name: "Price : 1000$" # Button Sub Name 
+  Message:
+    Succes: "§aSucces buy a key Common" # Success Message Buy A Key
+    Failed: "§cYour money is not enough" # Failed Message Buy A Key
+1:
+  Key:
+    Name: "Legendary"
+    Price: 5000
+  Button:
+    Name: "§l§eLegendary Key"
+    Sub-Name: "Price : 5000$"
+  Message:
+    Succes: "§aSucces buy a key Legendary"
+    Failed: "§cYour money is not enough"
