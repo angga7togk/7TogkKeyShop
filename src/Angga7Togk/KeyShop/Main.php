@@ -45,9 +45,10 @@ class Main extends PluginBase implements Listener {
         }
     
         $money = EconomyAPI::getInstance()->myMoney($player);
+        $key = $this->getServer()->getPluginManager()->getPlugin("PiggyCrates");
         if($money >= $this->config->get($data)["Key"]["Price"]){
               EconomyAPI::getInstance()->reduceMoney($player, $this->config->get($data)["Key"]["Price"]);
-              $this->getServer()->getCommandMap()->dispatch(new ConsoleCommandsender($this->getServer(), $this->getServer()->getLanguage()), "key " . $this->config->get($data)["Key"]["Name"] . " 1 \"" . $player->getName()) . "\"";
+              $key->giveKey($player,  $this->config->get($data)["Key"]["Name"], "1");
               $player->sendMessage($this->config->get($data)["Message"]["Succes"]);
             } else {
               $player->sendMessage($this->config->get($data)["Message"]["Failed"]);
