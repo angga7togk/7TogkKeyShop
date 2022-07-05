@@ -59,7 +59,7 @@ class Main extends PluginBase implements Listener {
       $form->addButton("§l§cExit\n§r§8Tap To Exit", 0, "textures/ui/cancel");
       for($i = 1;$i <= 100;$i++){
           if($this->config->exists($i)){
-              $form->addButton($this->config->get($i)["Button"]["Name"] . "\n§rPrice : " . $this->config->get($i)["Key"]["Price"]);
+              $form->addButton($this->config->get($i)["Button"]["Name"] . "\n§rPrice : " . $this->config->get($i)["Key"]["Price"], 0, "textures/blocks/trip_wire_source");
           }
       }
       $form->sendToPlayer($player);
