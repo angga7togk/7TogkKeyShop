@@ -5,7 +5,6 @@
 # Need plugin EconomyAPI and PiggyCrate to launch this plugin
 
 Title: "§l7TogkKeyShop"
-
 1:
   Key:
     Name: "Common" # Key Name

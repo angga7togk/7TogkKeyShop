@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Angga7Togk\KeyShop\Form;
+namespace angga7togk\keyshop\Form;
 
 use pocketmine\form\FormValidationException;
 

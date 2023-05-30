@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Angga7Togk\KeyShop\Form;
+namespace angga7togk\keyshop\Form;
 
 use pocketmine\form\Form as IForm;
 use pocketmine\player\Player;
@@ -50,7 +50,7 @@ abstract class Form implements IForm{
     public function processData(&$data) : void {
     }
 
-    public function jsonSerialize(){
+    public function jsonSerialize():array{
         return $this->data;
     }
 }

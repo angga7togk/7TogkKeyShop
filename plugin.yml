@@ -1,16 +1,17 @@
 name: 7TogkKeyShop
-main: Angga7Togk\KeyShop\Main
-version: 2.7
-api: 4.0.0
+main: angga7togk\keyshop\KeyShop
+version: 3.0.0
+api:
+- 4.0.0
+- 5.0.0
 author: Angga7Togk
-description: "Open 7TogkKeyShop Menu"
+description: "Open 7TogkKeyShop By Angga7Togk"
 
 commands:
   keyshop:
-    description: "Open The 7TogkKeyShop"
+    description: "Open The KeyShop"
     permission: keyshop.cmd
 
 permissions:
   keyshop.cmd:
-    description: "7TogkKeyShop Permission"
     default: true
