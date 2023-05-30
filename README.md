@@ -17,29 +17,30 @@ Plugin Ini Berguna Untuk Menjual Key Gacha
 ```
 ### [ 7TogkKeyShop ] ###
 
-# Di buat Angga7Togk
+# use § To Change Colors Text
 
-# Di Buat karena Gabut :)
-# Subrek Angga7Togk Tod
+# Need plugin EconomyAPI and PiggyCrate to launch this plugin
 
-# Pengen Punya Ayang Cewek Animek Anjr
-
-# Membutuhkan plugin EconomyAPI dan PiggyCrate
-# Batas Tombol 0 - 9 Kalo Lebih Bakal Eror
-0:
-  Key:
-    Name: "Common" # Nama Key Dari PiggyCrate
-    Price: 1000 # Harga Key
-  Button:
-    Name: "§l§eCommon Key" # Nama Tombol
-    Sub-Name: "Harga : 1k" # Nama Bawah 
+Title: "§l7TogkKeyShop"
 1:
+  Key:
+    Name: "Common" # Key Name
+    Price: 1000 # Price key
+  Button:
+    Name: "§l§eCommon Key" # Button Name
+  Message:
+    Succes: "§aSucces buy a key Common" # Success Message Buy A Key
+    Failed: "§cYour money is not enough" # Failed Message Buy A Key
+2:
   Key:
     Name: "Legendary"
     Price: 5000
   Button:
     Name: "§l§eLegendary Key"
-    Sub-Name: "Harga : 5k"
+  Message:
+    Succes: "§aSucces buy a key Legendary"
+    Failed: "§cYour money is not enough"
+
 ```
 
 
