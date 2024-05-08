@@ -1,7 +1,7 @@
 # 7TogkKeyShop
 Plugin Ini Berguna Untuk Menjual Key Gacha
 
-# Defend
+# Depend
 ```
  • EconomyAPI
  • PiggyCrate
