@@ -2,7 +2,7 @@
 
 namespace angga7togk\keyshop;
 
-use angga7togk\keyshop\Form\SimpleForm;
+use jojoe77777\FormAPI\SimpleForm;
 use onebone\economyapi\EconomyAPI;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
